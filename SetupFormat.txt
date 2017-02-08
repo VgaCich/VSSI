@@ -1,0 +1,11 @@
+Setup:
+[SetupHdr][Archive]$CRCStart[Script][ArchiveOffset:4][ScriptOffset:4]$CRCEnd[CRC:4]
+
+Archive:
+TBD
+
+Script:
+[UnpSize:4]{NRV2E[Script:Text]}
+
+Uninstall:
+[SetupHdr][ArchiveOffset:4=0][ScriptOffset:4=0][CRC:4=0]

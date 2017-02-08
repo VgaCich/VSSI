@@ -1,0 +1,59 @@
+Ini based.
+
+Installation order:
+  ;Pre-install deletes?
+  ;Pre-install runs?
+  Extract files
+  Ini, Registry
+  Post-install runs
+  Post-install deletes
+  Shortcuts
+  After-finish runs
+  
+Uninstallation order:
+  Pre-uninstall runs
+  Uninstall deletes
+  Uninstall files (shortcuts included)
+  Ini, Registry
+  ;Post-uninstall runs?
+
+Sections:
+  Options
+  Language
+  WelcomeText
+  UninstallWelcomeText
+  Files
+  Shortcuts
+  Run
+  InstallIni
+  UninstallIni
+  InstallRegistry
+  UninstallRegistry
+  InstallDelete
+  UninstallDelete
+  InstallRun
+  UninstallRun
+
+[Options]
+;Compiler options
+;TODO: AppId & update options
+OutFile=output file name
+WelcomeText=welcome text file name (overrides WelcomeText section)
+UninstallWelcomeText=uninstall welcome text file name (overrides UninstallWelcomeText section)
+;Setup options
+ProgramName=Program name
+ProgramVer=Program version
+InstallPath=Install path (default: %ProgramFiles%\%ProgramName%)
+ShortcutsFolder=Shortcuts folder (default: %ProgramName%)
+UIFont=UI font name
+AssocChanged=Update file icons (1/0)
+
+[Language]
+;Preliminary
+StrID=Str
+
+[WelcomeText]
+[UninstallWelcomeText]
+;Escaped welcome text in TXT or RTF format. Must not contain nulls.
+;Escaping (per line basis):
+;if (Line[1] = ';') or (TrimLeft(Line)[1] = '[') then Line := ';' + Line
